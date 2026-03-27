@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArtIn - Hi my name is ain</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">ArtIn</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="loader-text">Wait dude</div>
+</div>
+
+<div id="progress"></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <div class="lightbox-close" id="lbClose"></div>
+  <div class="lightbox-nav">
+    <div class="lightbox-btn" id="lbPrev"><div class="lb-arrow left"></div></div>
+    <div class="lightbox-btn" id="lbNext"><div class="lb-arrow right"></div></div>
+  </div>
+  <div class="lightbox-img-wrap" id="lbImgWrap">
+    <!-- Gambar lightbox akan diisi otomatis oleh JS -->
+  </div>
+  <div class="lightbox-caption" id="lbCaption">Humanity Collection</div>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">ArtIn</a>
+  <ul class="nav-links">
+    <li><a href="#products">New Art</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#leasing">My Art</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Inquire</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="img/aristoteles.jpg" alt="aristoteles" class="img-section">
+  </div>
+  <canvas class="hero-canvas-overlay" id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <div>
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">The Art<br> <em>of Humanity</em></h1>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <p class="hero-tagline">Where silence becomes a design language. Crafted for the modern workplace.</p>
+      <div class="hero-scroll"><div class="hero-scroll-line"></div>Scroll to explore</div>
+    </div>
+  </div>
+  <div class="hero-year">2025</div>
+</section>
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="statement-num reveal">01</div>
+  <div class="statement-text">
+    <h2 class="reveal">Humanity <em>create</em> and control everything in this world — without hesitation</h2>
+    <p class="statement-body reveal reveal-delay-1">We call our self as the greater creatures from the god, and claim a heaven as a reward of being kindness. But if we do the opposite, the hell is the reward.</p>
+  </div>
+  <div class="statement-num reveal">02</div>
+  <div class="statement-text">
+    <h2 class="reveal">Human <em>Evolution</em></h2>
+    <p class="statement-body reveal reveal-delay-1">Human evolution is not an epic tale of primitive creatures evolving into wise guardians of the universe. Instead, our evolution is a terrifying biological design a curse where our very intelligence has evolved purely as a weapon of mass destruction against our own planet.</p>
+  </div>
+</section>
+
+
+
+<!-- ============================================================ -->
+<!-- GALLERY DRIFT                                                  -->
+<!-- Ganti src="img/..." dengan nama file foto kamu                -->
+<!-- Letakkan semua foto di folder "img/" yang sama dengan file ini -->
+<!-- ============================================================ -->
+<div class="gallery-drift" id="gallery">
+  <div class="drift-label section-label reveal">The Humanity colection</div>
+  <div class="drift-track" id="driftTrack">
+
+    <!-- === ITEM ASLI === -->
+    <div class="drift-item" onclick="openLightbox(0)">
+      <div class="drift-img">
+        <img src="img/adamhawa.png" alt="Adam dan hawa">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">adam & hawa</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(1)">
+      <div class="drift-img">
+        <img src="img/athena.jpg" alt="antena">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Radio Comunication</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(2)">
+      <div class="drift-img">
+        <img src="img/gaza.jpg" alt="gaza">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Chaos of gaza</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(3)">
+      <div class="drift-img">
+        <img src="img/guernica.webp" alt="guamici">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">GUARNICA</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(4)">
+      <div class="drift-img">
+        <img src="img/Intersellar.jpg" alt="Intersetellar">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Intersetellar Movie</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(5)">
+      <div class="drift-img">
+        <img src="img/monalisa.jpg" alt="monalisa">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Monalisa</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(0)">
+      <div class="drift-img">
+        <img src="img/WW1.jpg" alt="Mutebox One">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">World war 1</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(1)">
+      <div class="drift-img">
+        <img src="img/unknown1.png" alt="unknown">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Mutebox Work</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(2)">
+      <div class="drift-img">
+        <img src="img/van gogh.webp" alt="Mutebox Meet">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Mutebox Meet</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(4)">
+      <div class="drift-img">
+        <img src="img/nagasaki ww2.jpg" alt="Mutebox Studio">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Mutebox Studio</span></div>
+    </div>
+
+    <!-- === KLON UNTUK INFINITE LOOP (duplikasi persis sama) === -->
+    <div class="drift-item" onclick="openLightbox(0)">
+      <div class="drift-img">
+        <img src="img/adamhawa.png" alt="Adam dan hawa">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">adam & hawa</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(1)">
+      <div class="drift-img">
+        <img src="img/athena.jpg" alt="antena">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Radio Comunication</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(2)">
+      <div class="drift-img">
+        <img src="img/gaza.jpg" alt="gaza">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Chaos of gaza</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(3)">
+      <div class="drift-img">
+        <img src="img/guernica.webp" alt="guamici">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">GUARNICA</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(4)">
+      <div class="drift-img">
+        <img src="img/Intersellar.jpg" alt="Intersetellar">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Intersetellar Movie</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(5)">
+      <div class="drift-img">
+        <img src="img/monalisa.jpg" alt="monalisa">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Monalisa</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(0)">
+      <div class="drift-img">
+        <img src="img/WW1.jpg" alt="Mutebox One">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">World war 1</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(1)">
+      <div class="drift-img">
+        <img src="img/unknown1.png" alt="unknown">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Mutebox Work</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(2)">
+      <div class="drift-img">
+        <img src="img/van gogh.webp" alt="Mutebox Meet">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Mutebox Meet</span></div>
+    </div>
+
+    <div class="drift-item" onclick="openLightbox(4)">
+      <div class="drift-img">
+        <img src="img/nagasaki ww2.jpg" alt="Mutebox Studio">
+      </div>
+      <div class="drift-overlay"><span class="drift-caption">Mutebox Studio</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- MASONRY GALLERY                                               -->
+<!-- Ganti src="img/..." sesuai foto kamu                         -->
+<!-- ============================================================ -->
+<section class="masonry-section">
+  <div class="masonry-header">
+    <h2 class="reveal">The <em style="font-style:italic;color:var(--warm)">Archive</em></h2>
+    <div class="masonry-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pods">Pods</button>
+      <button class="filter-btn" data-filter="interiors">Interiors</button>
+      <button class="filter-btn" data-filter="details">Details</button>
+    </div>
+  </div>
+  <div class="masonry-grid" id="masonryGrid">
+
+    <div class="masonry-item" data-cat="pods" onclick="openLightbox(0)">
+      <div class="masonry-img-wrap">
+        <img src="colection/In the Waves.png" alt="Mutebox One">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">In the Waves</div>
+        <div class="masonry-sub">Exhibiting the painting at the Café Volpini in Paris in 1889, Gauguin established himself as a leader of the Symbolist movement in art.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="interiors" onclick="openLightbox(1)">
+      <div class="masonry-img-wrap">
+        <img src="colection/Jules Abel Faivre.png" alt="">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Interior Detail</div>
+        <div class="masonry-sub">Natural Materials</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="pods" onclick="openLightbox(2)">
+      <div class="masonry-img-wrap">
+        <img src="colection/Cupid and Psyche.png" alt="Mutebox Meet">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Cupid and Psyche</div>
+        <div class="masonry-sub">The tale of Cupid and Psyche (or "Eros and Psyche") is placed at the midpoint of Apuleius's novel, and occupies about a fifth of its total length.[6] The novel itself is a first-person narrative by the protagonist Lucius. Transformed into a donkey by magic gone wrong, Lucius undergoes various trials and adventures, and finally regains human form by eating roses sacred to Isis. Psyche's story has some similarities, including the theme of dangerous curiosity, punishments and tests, and redemption through divine favor.[</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="details" onclick="openLightbox(3)">
+      <div class="masonry-img-wrap">
+        <img src="colection/hitlerphoto.jpg" alt="Acoustic Wool">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Hitler Art</div>
+        <div class="masonry-sub">Before WW2</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="interiors" onclick="openLightbox(4)">
+      <div class="masonry-img-wrap">
+        <img src="colection/rest.png" alt="Ventilation">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">William Adolphe Bouguereau</div>
+        <div class="masonry-sub">One of the most celebrated academic painters of his time, Bouguereau underscores the moral virtues of the Italian peasants in this painting by depicting the dome of St. Peter's in the distance. The idealized figures and their triangular grouping recall the Holy Family paintings by Renaissance master Raphael 400 years earlier. <br>The painting was purchased directly from the artist by Cleveland banker and philanthropist Hinman B. Hurlbut in July 1879.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="pods" onclick="openLightbox(5)">
+      <div class="masonry-img-wrap">
+        <img src="colection/The Burlington House Cartoon.png" alt="Mutebox Work">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">The Burlington House Cartoon</div>
+        <div class="masonry-sub">This large drawing is a cartoon, that is, a full-size preparatory study for a painting. Usually, in order to transfer a design onto a panel, the outlines of cartoons were pricked or incised. This example is intact. It must have been preserved in its own right as a finished drawing, although some areas have deliberately been left inconclusive or in rough outline.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="details" onclick="openLightbox(0)">
+      <div class="masonry-img-wrap">
+        <img src="colection/yesus dan pengikutnya.webp" alt="Barstool Detail">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Yesus</div>
+        <div class="masonry-sub">The physical dimensions of The Last Supper are quite large. The painting measures 8.8 meters x 4.6 meters, making it the largest painting by Da Vinci.
+The painting is now housed in a church in Italy called Santa Maria delle Grazie. Aesthetically, the painting has received much praise for its impressive detail in a large-scale painting.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="interiors" onclick="openLightbox(2)">
+      <div class="masonry-img-wrap">
+        <img src="colection/Monalisa.jpg" alt="Interior Warmth">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Monalisa</div>
+        <div class="masonry-sub">The Mona Lisa is a 16th-century oil painting by Leonardo da Vinci, renowned for its enigmatic smile and realistic sfumato (subtle color gradations) technique. Believed to be a portrait of Lisa Gherardini, the wife of a Florentine silk merchant, the work is on display at the Louvre Museum in France and has become a world art icon due to its uniqueness.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="pods" onclick="openLightbox(1)">
+      <div class="masonry-img-wrap">
+        <img src="colection/clown.webp" alt="Mutebox Studio">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">The Clows</div>
+        <div class="masonry-sub">"The Clows," two clowns, successfully haunt the carnival scene, presented with the mime figures and skin tones on the right.
+
+Research shows that fear is a difficult emotion to fake, as it involves more upper facial muscles than other emotions. One can immediately sense it when one sees the clown's furrowed brow as he stares blankly at the figure on his right.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="details" onclick="openLightbox(3)">
+      <div class="masonry-img-wrap">
+        <img src="colection/salahjepret.png" alt="Handle Detail">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Salah Jepret</div>
+        <div class="masonry-sub">The most iconic art from 2025, man salah jepret accidently press camera button</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="pods" onclick="openLightbox(4)">
+      <div class="masonry-img-wrap">
+        <img src="colection/ibuku.jpg" alt="Night Edition">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Ibuku - Effendy</div>
+        <div class="masonry-sub">Throughout his life and career, Affandi produced thousands of stories-filled and iconic paintings, exhibited in various art exhibitions worldwide, including in Asia, Europe, America, and Australia. One of his most famous paintings is a portrait of his mother, titled "Ibuku Ibu."
+This painting, one of Affandi's earliest works, demonstrates his skill in realistic portraiture and expresses his love for his mother. In "Ibuku Ibu," Affandi depicts his mother in meticulous detail, depicting a sorrowful expression on her face.</div>
+      </div>
+    </div>
+
+    <div class="masonry-item" data-cat="interiors" onclick="openLightbox(5)">
+      <div class="masonry-img-wrap">
+        <img src="colection/rose istriku.jpeg" alt="Pod Arrangement">
+      </div>
+      <div class="masonry-item-info">
+        <div class="masonry-name">Rose Istriku</div>
+        <div class="masonry-sub">In the painting, Sudjojono paints a portrait of his wife, Rose Pandanwangi, sitting with a book on her lap.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FEATURED SPLIT                                                -->
+<!-- Ganti src="img/..." sesuai foto kamu                         -->
+<!-- ============================================================ -->
+<section class="featured-split">
+ 
+  <div class="split-panel">
+    <div class="split-bg">
+      <img src="img/sejarahdunia.png" alt="Secret of Human History">
+    </div>
+    <div class="split-content">
+      <div class="split-tag">Art of Secret</div>
+      <h3 class="split-title">Secret<br>of Human History</h3>
+      <p class="split-desc">The feeling of having no power over people and events is generally unbearable to us — when we feel helpless we feel miserable. No one wants less power; everyone wants more.</p>
+      <div class="split-link">
+        <a
+          href="https://drive.google.com/file/d/18gnkNFgT9ftGRqJh5tsR9ki3vNtQAPyW/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="split-explore-btn"
+        >
+          Explore <span class="split-arrow-inline"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="split-panel">
+    <div class="split-bg">
+      <img src="img/the48law.png" alt="The 48 Laws of Power">
+    </div>
+    <div class="split-content">
+      <div class="split-tag">Art of Manipulation Power</div>
+      <h3 class="split-title">The 48 Laws<br>of Power</h3>
+      <p class="split-desc">The feeling of having no power over people and events is generally unbearable to us—when we feel helpless we feel miserable. No one wants less power; everyone wants more. In the world today, however, it is dangerous to seem too power hungry, to be overt with your power moves. We have to seem fair and decent.</p>
+      <div class="split-link">
+        <a
+          href="https://drive.google.com/file/d/18FJf4pMVhWmadPhULJd9VYFwQRaeHgsC/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="split-explore-btn"
+        >
+          Explore <span class="split-arrow-inline"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+ 
+</section>
+
+<!-- MARQUEE 1 -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Resonating Silence</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Sanctuaries of the Mind</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">The Geometry of Thought</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Veils of Solitude</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Monolithic Craft</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Resonating Silence</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Sanctuaries of the Mind</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">The Geometry of Thought</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Veils of Solitude</span><span class="marquee-item warm">✦</span>
+    <span class="marquee-item">Monolithic Craft</span><span class="marquee-item warm">✦</span>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PRODUCTS                                                      -->
+<!-- Ganti src="img/..." sesuai foto kamu                         -->
+<!-- ============================================================ -->
+<section class="products" id="products">
+  <div class="products-header reveal">
+    <span class="products-title">Our Products</span>
+    <span class="products-count">04 models</span>
+  </div>
+  <div class="products-grid">
+
+    <!-- Ganti URL di onclick setiap card sesuai link kamu -->
+
+    <div class="product-card reveal" onclick="window.open('https://www.teslarati.com/tesla-optimus-job-listings/', '_blank')">
+      <div class="product-card-inner">
+        <div class="card-box-visual">
+          <img src="img/teslarobot.jpg" alt="Tesla AI Robot" class="card-product-img">
+        </div>
+        <span class="card-badge">New</span>
+      </div>
+      <div class="card-info">
+        <div class="card-name">Artificial Intelligence - Tesla</div>
+        <div class="card-desc">More efficient than the human body.</div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-1" onclick="window.open('https://news.pcim.mesago.com/quantum-computers-how-do-they-work-and-what-might-we-expect-of-them-a-c6371d5d640900f569cfcf719816135a/?cmp=go-ta-art-trf-PCIM_DSA-20251205-coma&gad_source=1&gad_campaignid=23330081162&gbraid=0AAAAADRfZcBurhSKJi1seqJAxqj3vlpM9&gclid=Cj0KCQjw1ZjOBhCmARIsADDuFTDQD6V9Gamrh8NICmKG3-0aqYHynXaTticackW66RZ2i3fmJgO8ebIaAphmEALw_wcB', '_blank')">
+      <div class="product-card-inner">
+        <div class="card-box-visual">
+          <img src="img/kuantumkomputer.jpg" alt="Mutebox Meet" class="card-product-img">
+        </div>
+        <span class="card-subtitle">Computer Tecnology</span>
+      </div>
+      <div class="card-info">
+        <div class="card-name">Computer Quantum</div>
+        <div class="card-desc">a revolutionary computing device that leverages principles of quantum mechanics</div>
+      </div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2" onclick="window.open('https://neuralink.com/', '_blank')">
+      <div class="product-card-inner" style="background:#0e1014">
+        <div class="card-box-visual">
+          <img src="img/brainchip.jpg" alt="Mutebox Work" class="card-product-img">
+        </div>
+        <span class="card-badge">New</span>
+        <span class="card-subtitle">Let The Light Shine Through</span>
+      </div>
+      <div class="card-info">
+        <div class="card-name">Neuro Chip</div>
+        <div class="card-desc">Ability to use smartphone or any electronic tecnology from mind.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CINEMATIC ROW                                                 -->
+<!-- Ganti src="img/..." sesuai foto kamu                         -->
+<!-- ============================================================ -->
+<section class="cinematic">
+  <div class="cinematic-header">
+    <div class="section-label reveal">Silences</div>
+    <h2 class="reveal">Captured in <em style="font-style:italic;color:var(--warm)">stillness</em></h2>
+  </div>
+  <div class="cinematic-row reveal">
+
+    <div class="cinematic-item" onclick="openLightbox(2)">
+      <div class="cinematic-bg">
+        <img src="img/silence1.jpg" alt="Hope">
+      </div>
+      <div class="cinematic-meta">
+        <div class="cinematic-label">The hope</div>
+        <div class="cinematic-title">hopless</div>
+      </div>
+    </div>
+
+    <div class="cinematic-stack">
+      <div class="cinematic-item" onclick="openLightbox(4)">
+        <div class="cinematic-bg">
+          <img src="img/silence2.jpg" alt="Green Space">
+        </div>
+        <div class="cinematic-meta">
+          <div class="cinematic-label">Regret</div>
+          <div class="cinematic-title">...</div>
+        </div>
+      </div>
+      <div class="cinematic-item" onclick="openLightbox(1)">
+        <div class="cinematic-bg">
+          <img src="img/Silence3.jpg" alt="Blue Hour">
+        </div>
+        <div class="cinematic-meta">
+          <div class="cinematic-label">clows</div>
+          <div class="cinematic-title">...</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARQUEE 2 -->
+<div class="marquee-section">
+  <div class="marquee-track reverse">
+    <span class="marquee-item">Eternal Brushstrokes</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">The Geometry of Soul</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">Sculpting Silence</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">Canvas of Human Evolution</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">Classical Echoes</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">Visual Poetry</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">Timeless Narratives</span><span class="marquee-item warm">—</span>
+    <span class="marquee-item">Aesthetic Order</span><span class="marquee-item warm">—</span>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FEATURES                                                      -->
+<!-- Ganti src="img/..." sesuai foto kamu                         -->
+<!-- ============================================================ -->
+<section class="features" id="about">
+  <div class="features-image parallax" data-speed="0.03">
+    <div class="ph">
+      <img src="img/human.jpg" alt="Acoustic Features" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+  <div class="features-content">
+    <div class="feature-item">
+      <div class="feature-num">01</div>
+      <h3 class="feature-title">The <em> Enigma</em><br> of Human Art</h3>
+      <p class="feature-body">Art is not merely a combination of pigment on canvas, chiseled stone, or structured sound. It is a peculiar alchemy—the deliberate translation of the unseen human spirit into the physical realm. 
+        It is the language we use when words fail to capture the vastness of the human experience.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">02</div>
+      <h3 class="feature-title">the Vessels<br><em>of The Unspoken</em></h3>
+      <p class="feature-body">Every deliberate brushstroke, every carved line, and every composed chord holds a secret. When humans create art, they are reaching into a dark, boundless internal void, pulling out fragments of their consciousness, and trapping them in matter.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">03</div>
+      <h3 class="feature-title">A rebellion<em>Against</em><br>The Void</h3>
+      <p class="feature-body">Why do mortals create? Perhaps it is an act of desperate rebellion. Knowing that their existence is brief, they forge these artifacts to outlive their own heartbeat. A painted eye continues to watch centuries after the artist's own eyes have closed. A melody echoes 
+        long after the breath that carried it has returned to the wind.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">04</div>
+      <h3 class="feature-title">The Genetic<br><em>Memory of Form</em></h3>
+      <p class="feature-body">The human compulsion to create is not merely a cultural habit; it is an evolutionary phantom limb. From the crushed red ochre blown over a hand against a cold, dark Paleolithic cave wall, to the glowing, infinite realms of digital media, the skin of the art mutates, but the ancient pulse beneath it remains unchanged.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">05</div>
+      <h3 class="feature-title">The Aesthetic<br><em>Survival</em></h3>
+      <p class="feature-body">Within the machine, invisible entities of shape and color are forced to mate, mutate, and inherit the mathematical traits of their parents. The bizarre and the unfit are mercilessly culled into the void. Only the visually captivating are permitted to survive and breed the next generation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat-item reveal"><div class="stat-num" data-target="4540000000">0</div><div class="stat-label">Earth<br>Age</div></div>
+  <div class="stat-item reveal reveal-delay-1"><div class="stat-num" data-target="8281855462">0</div><div class="stat-label">Human<br>Population</div></div>
+  <div class="stat-item reveal reveal-delay-2"><div class="stat-num" data-target="195">0</div><div class="stat-label">Country</div></div>
+  <div class="stat-item reveal reveal-delay-3"><div class="stat-num" data-target="21">0</div><div class="stat-label">AI Populations</div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VIDEO SECTION                                                 -->
+<!-- Ganti src="img/..." dengan thumbnail video kamu              -->
+<!-- ============================================================ -->
+<section class="video-section">
+  <div class="video-inner">
+    <img src="img/aristoteles.jpg" alt="Brand Film" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="video-inner-overlay"></div>
+  </div>
+  <div class="video-play-btn" id="videoPlayBtn"><div class="play-triangle"></div></div>
+  <div class="video-caption reveal-left">
+    <div class="video-caption-tag">Brand Film 2025</div>
+    <h2 class="video-caption-title">The Art of<br>Silence</h2>
+    <p class="video-caption-desc">Not aviliable for github hehe</p>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-banner">
+  <blockquote class="quote-text reveal">"<em>Evolutionary</em> art reminds us that beauty is not a static truth, but a living, breathing organism —whether grown from the blood of our ancestors or cultivated within the cold logic of a <em>machine</em>."</blockquote>
+  <p class="quote-attribution reveal reveal-delay-1">— The Mutebox Design Philosophy</p>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <h2 class="reveal">Where silence<br>becomes <em>productive</em>.</h2>
+  <a href="#contact" class="about-cta reveal reveal-delay-1">Learn about responsibility <div class="about-cta-line"></div></a>
+</section>
+
+<!-- ============================================================ -->
+<!-- LEASING                                                       -->
+<!-- Ganti src="img/..." sesuai foto kamu                         -->
+<!-- ============================================================ -->
+<section class="leasing" id="leasing">
+  <div class="leasing-content reveal-left">
+    <div class="leasing-tag">My art</div>
+    <h2 class="leasing-heading">Yea bro</h2>
+    <p class="leasing-body">I show you my art, but latter when i become a rich ass</p>
+    <a href="#contact" class="leasing-btn">Explore Leasing</a>
+  </div>
+  <div class="leasing-image">
+    <div class="ph">
+      <img src="img/myart.jpg" alt="Leasing" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-brand">
+    <span class="logo-text">ArtIn</span>
+    <p>Human art in silence</p>
+  </div>
+  <div class="footer-col"><h4>Another Page</h4><ul>
+    <li><a href="#">See</a></li>
+    <li><a href="#">you</a></li>
+    <li><a href="#">Soon</a></li>
+    <li><a href="#">my</a></li>
+    <li><a href="#">Friend</a></li>
+  </ul></div>
+  <div class="footer-col"><h4>Company</h4><ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Responsibility</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">Press</a></li>
+  </ul></div>
+  <div class="footer-col"><h4>Connect</h4><ul>
+    <li><a href="#">Heaven</a></li>
+    <li><a href="#">Hell</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Instagram</a></li>
+  </ul></div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2025 ArtIn. All rights reserved.</span>
+  <span>Animal · Plant · Human</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -335,7 +335,24 @@ nav.scrolled {
   font-weight: 300;
   opacity: 0.04;
   line-height: 1;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
+
+@keyframes autoBlurAnimation {
+  0%{
+    filter: blur(40px);
+
+  }
+
+  45%, 55% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(40px);
+  }
+}
+
 
 .statement-text h2 {
   font-family: 'Cormorant Garamond', serif;
@@ -343,6 +360,8 @@ nav.scrolled {
   font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.01em;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
 
 .statement-text h2 em {
@@ -356,6 +375,8 @@ nav.scrolled {
   opacity: 0.5;
   max-width: 480px;
   margin-top: 32px;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
 
 /* ============================================================
@@ -858,6 +879,7 @@ nav.scrolled {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  
 }
 
 .features-image {
@@ -894,6 +916,8 @@ nav.scrolled {
   text-transform: uppercase;
   opacity: 0.25;
   margin-bottom: 16px;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
 
 .feature-title {
@@ -902,11 +926,15 @@ nav.scrolled {
   font-weight: 300;
   margin-bottom: 16px;
   line-height: 1.1;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
 
 .feature-title em {
   font-style: italic;
   color: var(--warm);
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
 
 .feature-body {
@@ -914,6 +942,8 @@ nav.scrolled {
   line-height: 1.8;
   opacity: 0.45;
   max-width: 340px;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
 }
 
 /* ============================================================
